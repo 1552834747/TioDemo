@@ -1,0 +1,13 @@
+tio:
+  websocket:
+    server:
+      port: 9876
+      heartbeat-timeout: 60000
+      #是否支持集群，集群开启需要redis
+    cluster:
+      enabled: false
+    redis:
+      ip: 127.0.0.1
+      port: 6379
+server:
+  port: 8889
