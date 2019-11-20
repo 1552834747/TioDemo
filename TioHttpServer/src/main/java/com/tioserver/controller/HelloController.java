@@ -34,7 +34,8 @@ public class HelloController {
 	public String pushMessage() throws Exception {
 		HelloPacket packet = new HelloPacket();
 		packet.setBody("这是一条通过服务器推送的消息".getBytes(HelloPacket.CHARSET));
-		Tio.sendToAll(bootstrap.getServerGroupContext(), packet);
+//		Tio.sendToAll(bootstrap.getServerGroupContext(), packet);
+		Tio.sendToGroup(bootstrap.getServerGroupContext(),"Air",packet);
 		logger.info("成功推送一条信息到客户端");
 		return "成功推送一条信息到客户端";
 	}

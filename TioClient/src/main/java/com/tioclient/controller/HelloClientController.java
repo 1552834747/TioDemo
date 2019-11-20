@@ -38,6 +38,7 @@ public class HelloClientController {
     public static ClientGroupContext clientGroupContext = new ClientGroupContext(tioClientHandler, aioListener, reconnConf);
 
     public static TioClient tioClient = null;
+    //通道
     public static ClientChannelContext clientChannelContext = null;
 
     static {

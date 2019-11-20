@@ -1,4 +1,4 @@
-package com.tioserver;
+package com.tioserver.listener;
 
 import org.tio.common.starter.annotation.TioServerGroupListener;
 import org.tio.core.ChannelContext;

@@ -1,4 +1,4 @@
-package com.tioserver;
+package com.tioserver.listener;
 
 import org.tio.common.starter.annotation.TioServerIpStatListener;
 import org.tio.core.ChannelContext;

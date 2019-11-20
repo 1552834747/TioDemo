@@ -6,6 +6,7 @@ import org.tio.client.ReconnConf;
 import org.tio.client.TioClient;
 import org.tio.client.intf.ClientAioHandler;
 import org.tio.client.intf.ClientAioListener;
+import org.tio.core.GroupContext;
 import org.tio.core.Node;
 import org.tio.core.Tio;
 
@@ -38,11 +39,13 @@ public class HelloClientStarter {
 	 */
 	public static void main(String[] args) throws Exception {
 		//链接对象
-		clientGroupContext.setHeartbeatTimeout(Const.TIMEOUT);//设置心跳超时
+//		clientGroupContext.setHeartbeatTimeout(Const.TIMEOUT);//设置心跳超时
+		clientGroupContext.groups.bind();
 		//客户端
 		tioClient = new TioClient(clientGroupContext);
 		//链接指定节点
 		clientChannelContext = tioClient.connect(serverNode);
+		clientGroupContext.groups.bind("Air",clientChannelContext);
 		//连上后，发条消息玩玩
 		send();
 	}

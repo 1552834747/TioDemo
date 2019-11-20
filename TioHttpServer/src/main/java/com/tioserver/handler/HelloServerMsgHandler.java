@@ -1,5 +1,7 @@
-package com.tioserver;
+package com.tioserver.handler;
 
+import com.tioserver.HelloPacket;
+import com.tioserver.PacketUtil;
 import org.tio.common.starter.TioServerMsgHandlerNotFoundException;
 import org.tio.common.starter.annotation.TioServerMsgHandler;
 import org.tio.core.ChannelContext;
